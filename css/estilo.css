@@ -1,0 +1,38 @@
+*{
+    margin:0;
+    padding:0;
+}
+body{
+    background-color: #222;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.interruptor{
+    width:100px;
+    height:100px;
+    border-radius: 50%;
+    padding:10px;
+    background-image: linear-gradient(to right,#555,#ccc);
+}
+.interruptor span{
+    display: block;
+    height: 100px;
+    border-radius: 50%;
+    background-image: linear-gradient(to left, #333, #999);
+    cursor:pointer;
+}
+.encendido span{
+    background-image: linear-gradient(to right, #ff0,#f70);
+    animation:halo 0.8s infinite;
+}
+
+@keyframes halo{
+    0%,100%{
+        box-shadow: 0 0 10px 0 rgba(255, 255, 255, 0);
+    }
+    50%{
+        box-shadow: 0 0 20px 10px rgba(255, 255, 255, 0.6);
+    }
+}
